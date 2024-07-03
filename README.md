@@ -10,13 +10,20 @@ To participate in the CTF challenge, you just need to run the provided script. T
 
 ### Instructions
 
-1. **Run the script:**
+1. **Clone the repository:**
+
+    ```bash
+    git clone https://github.com/Yash09042004/Yashz_CTF.git
+    cd Yashz_CTF
+    ```
+
+2. **Run the script:**
 
     ```bash
     ./run_script.sh
     ```
 
-2. **Enter the password when prompted:**
+3. **Enter the password when prompted:**
 
     ```plaintext
     The default password is 'wlug'.
