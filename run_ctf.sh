@@ -8,11 +8,11 @@ fi
 
 # Pull the Docker image
 echo "Pulling the Docker image..."
-sudo docker pull yashkiran2004/ctf_challenge:latest
+sudo docker pull yashkiran2004/lev2:latest
 
 # Run the Docker container
 echo "Running the Docker container..."
-sudo docker run -d -p 2222:22 --name ctf_challenge yashkiran2004/ctf_challenge:latest
+sudo docker run -d -p 2222:22 --name ctf_challenge yashkiran2004/lev2:latest
 
 # Display SSH access instructions
 echo "The container is now running. To access the container via SSH, use the following command:"
