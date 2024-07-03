@@ -17,13 +17,19 @@ To participate in the CTF challenge, you just need to run the provided script. T
     cd Yashz_CTF
     ```
 
-2. **Run the script:**
+2. **Give the permission:**
+
+    ```bash
+    chmod +x run_ctf.sh
+    ```
+    
+3. **Run the script:**
 
     ```bash
     ./run_ctf.sh
     ```
 
-3. **Enter the password when prompted:**
+4. **Enter the password when prompted:**
 
     ```plaintext
     The default password is 'wlug'.
