@@ -20,7 +20,7 @@ To participate in the CTF challenge, you just need to run the provided script. T
 2. **Run the script:**
 
     ```bash
-    ./run_script.sh
+    ./run_ctf.sh
     ```
 
 3. **Enter the password when prompted:**
