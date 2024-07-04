@@ -29,11 +29,6 @@ To participate in the CTF challenge, you just need to run the provided script. T
     ./run_ctf.sh
     ```
 
-4. **Enter the password when prompted:**
-
-    ```plaintext
-    The default password is 'wlug'.
-    ```
 
 That's it! The script will handle everything else for you. Once it completes, you will be ready to play the amazing CTF challenge!
 
