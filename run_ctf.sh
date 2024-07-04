@@ -1,26 +1,10 @@
 #!/bin/bash
 
-# GitHub credentials (ensure the token has `read:packages` scope)
-GITHUB_USERNAME="yash09042004"
-GITHUB_TOKEN="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"
-
 # Docker image details
 IMAGE_NAME="ghcr.io/yash09042004/yashz_ctf/2:latest"
 
 # Ensure the script is executable
 # chmod +x run_ctf.sh
-
-# Display message: Logging in to GitHub Container Registry
-echo "Logging in to GitHub Container Registry..."
-echo $GITHUB_TOKEN | docker login ghcr.io -u $GITHUB_USERNAME --password-stdin
-
-# Check if login was successful
-if [ $? -eq 0 ]; then
-    echo "Login successful!"
-else
-    echo "Login failed. Please check your credentials and try again."
-    exit 1
-fi
 
 # Pull the Docker image
 echo "Pulling Docker image $IMAGE_NAME from GitHub Packages..."
