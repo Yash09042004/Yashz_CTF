@@ -21,7 +21,7 @@ fi
 
 # Run the Docker container with interactive terminal support
 echo "Starting the CTF environment..."
-docker run -it $IMAGE_NAME sh
+docker run -it $IMAGE_NAME /bin/sh
 
 # Additional echo to indicate end of script
 echo "Script execution complete."
