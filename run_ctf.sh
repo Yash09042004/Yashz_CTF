@@ -1,26 +1,42 @@
 #!/bin/bash
 
-# Check if Docker is installed
-if ! [ -x "$(command -v docker)" ]; then
-  echo 'Error: Docker is not installed.' >&2
-  exit 1
+# GitHub credentials (ensure the token has `read:packages` scope)
+GITHUB_USERNAME="yash09042004"
+GITHUB_TOKEN="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"
+
+# Docker image details
+IMAGE_NAME="ghcr.io/yash09042004/yashz_ctf/2:latest"
+
+# Ensure the script is executable
+# chmod +x run_ctf.sh
+
+# Display message: Logging in to GitHub Container Registry
+echo "Logging in to GitHub Container Registry..."
+echo $GITHUB_TOKEN | docker login ghcr.io -u $GITHUB_USERNAME --password-stdin
+
+# Check if login was successful
+if [ $? -eq 0 ]; then
+    echo "Login successful!"
+else
+    echo "Login failed. Please check your credentials and try again."
+    exit 1
 fi
 
 # Pull the Docker image
-echo "Pulling the Docker image..."
-sudo docker pull yashkiran2004/level2:latest
+echo "Pulling Docker image $IMAGE_NAME from GitHub Packages..."
+docker pull $IMAGE_NAME
 
-# Run the Docker container
-echo "Running the Docker container..."
-sudo docker run -d -p 2222:22 --name ctf_challenge yashkiran2004/level2:latest
+# Check if pull was successful
+if [ $? -eq 0 ]; then
+    echo "Image successfully pulled!"
+else
+    echo "Failed to pull image. Please check the image name and try again."
+    exit 1
+fi
 
-# Display SSH access instructions
-echo "The container is now running. To access the container via SSH, use the following command:"
-echo "ssh root@localhost -p 2222"
-echo "The default password is 'wlug'"
+# Run the Docker container with interactive terminal support
+echo "Starting the CTF environment..."
+docker run -it $IMAGE_NAME /bin/bash
 
-# Wait for user to press any key to continue
-read -p "Press any key to continue..."
-
-# SSH into the container
-ssh root@localhost -p 2222
+# Additional echo to indicate end of script
+echo "Script execution complete."
