@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # Docker image details
+
 IMAGE_NAME="ghcr.io/yash09042004/yashz_ctf/2:latest"
 
 # Ensure the script is executable
