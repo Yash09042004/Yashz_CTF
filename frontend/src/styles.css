@@ -1,0 +1,9 @@
+body{font-family:Inter, Arial, sans-serif; background:#0f172a; color:#e6eef8; margin:0; display:flex; align-items:center; justify-content:center; min-height:100vh}
+.app{width:900px; padding:40px; background:linear-gradient(180deg,#111827, #071125); border-radius:12px; box-shadow:0 10px 30px rgba(2,6,23,.6)}
+h1{margin:0 0 20px}
+.leaderboard table{width:100%; border-collapse:collapse}
+.leaderboard th, .leaderboard td{padding:8px 12px; text-align:left}
+.leaderboard tr:nth-child(even){background:rgba(255,255,255,0.03)}
+.submit-form{display:flex; gap:8px; margin-bottom:12px}
+.submit-form input{padding:8px 10px; border-radius:6px; border:1px solid rgba(255,255,255,0.08); background:rgba(255,255,255,0.03); color:inherit}
+.submit-form button{padding:8px 12px; border-radius:6px; background:#06b6d4; border:none; color:#042c34}
