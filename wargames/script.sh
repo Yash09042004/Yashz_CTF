@@ -12,6 +12,7 @@ fi
 
 # Activate virtual environment
 
+
 source venv/bin/activate
 
 # Install requirements if file exists

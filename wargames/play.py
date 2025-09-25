@@ -253,6 +253,7 @@ def get_current_level(user_id):
     return -1
 
 
+
 def print_section_header(title):
     print(f"{BOLD}{MAGENTA}┌──────────────────────────────────────┐{RESET}")
     print(f"{BOLD}{MAGENTA}│ {title}{RESET}{BOLD}{MAGENTA}{' ' * (38 - len(title) - 1)}│{RESET}")
